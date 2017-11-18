@@ -39,40 +39,49 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboContas = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboContaTrans = new System.Windows.Forms.ComboBox();
+            this.btTransferir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTitular
             // 
-            this.txtTitular.Location = new System.Drawing.Point(85, 30);
+            this.txtTitular.Location = new System.Drawing.Point(60, 26);
             this.txtTitular.Name = "txtTitular";
-            this.txtTitular.Size = new System.Drawing.Size(100, 20);
+            this.txtTitular.Size = new System.Drawing.Size(125, 20);
             this.txtTitular.TabIndex = 0;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(85, 56);
+            this.txtNumero.Location = new System.Drawing.Point(60, 52);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(125, 20);
             this.txtNumero.TabIndex = 1;
             // 
             // txtSaldo
             // 
-            this.txtSaldo.Location = new System.Drawing.Point(85, 82);
+            this.txtSaldo.Location = new System.Drawing.Point(60, 78);
             this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldo.Size = new System.Drawing.Size(125, 20);
             this.txtSaldo.TabIndex = 2;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(85, 108);
+            this.txtValor.Location = new System.Drawing.Point(60, 104);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.Size = new System.Drawing.Size(125, 20);
             this.txtValor.TabIndex = 3;
             // 
             // btDeposita
             // 
-            this.btDeposita.Location = new System.Drawing.Point(17, 149);
+            this.btDeposita.Location = new System.Drawing.Point(29, 130);
             this.btDeposita.Name = "btDeposita";
             this.btDeposita.Size = new System.Drawing.Size(75, 23);
             this.btDeposita.TabIndex = 4;
@@ -82,7 +91,7 @@
             // 
             // btSaca
             // 
-            this.btSaca.Location = new System.Drawing.Point(127, 149);
+            this.btSaca.Location = new System.Drawing.Point(107, 130);
             this.btSaca.Name = "btSaca";
             this.btSaca.Size = new System.Drawing.Size(75, 23);
             this.btSaca.TabIndex = 5;
@@ -93,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 33);
+            this.label1.Location = new System.Drawing.Point(7, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 6;
@@ -102,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 59);
+            this.label2.Location = new System.Drawing.Point(7, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 7;
@@ -111,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 85);
+            this.label3.Location = new System.Drawing.Point(9, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 8;
@@ -120,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 111);
+            this.label4.Location = new System.Drawing.Point(9, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 9;
@@ -138,24 +147,98 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNumero);
             this.groupBox1.Controls.Add(this.txtTitular);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 180);
+            this.groupBox1.Size = new System.Drawing.Size(208, 172);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboContas);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(13, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(208, 72);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscar Conta";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Conta:";
+            // 
+            // comboContas
+            // 
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(59, 28);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(125, 21);
+            this.comboContas.TabIndex = 1;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btTransferir);
+            this.groupBox3.Controls.Add(this.comboContaTrans);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(13, 268);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 93);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Conta Destino";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Conta:";
+            // 
+            // comboContaTrans
+            // 
+            this.comboContaTrans.FormattingEnabled = true;
+            this.comboContaTrans.Location = new System.Drawing.Point(60, 27);
+            this.comboContaTrans.Name = "comboContaTrans";
+            this.comboContaTrans.Size = new System.Drawing.Size(121, 21);
+            this.comboContaTrans.TabIndex = 1;
+            // 
+            // btTransferir
+            // 
+            this.btTransferir.Location = new System.Drawing.Point(60, 61);
+            this.btTransferir.Name = "btTransferir";
+            this.btTransferir.Size = new System.Drawing.Size(75, 23);
+            this.btTransferir.TabIndex = 2;
+            this.btTransferir.Text = "Transferir";
+            this.btTransferir.UseVisualStyleBackColor = true;
+            this.btTransferir.Click += new System.EventHandler(this.btTransferir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 207);
+            this.ClientSize = new System.Drawing.Size(233, 368);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -173,6 +256,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboContas;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btTransferir;
+        private System.Windows.Forms.ComboBox comboContaTrans;
+        private System.Windows.Forms.Label label6;
     }
 }
 

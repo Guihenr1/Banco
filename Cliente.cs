@@ -2,9 +2,9 @@
 {
     public class Cliente
     {
-        public Cliente(string p)
+        public Cliente(string nome)
         {
-            this.Nome = p;
+            this.Nome = nome;
         }
 
         public string Nome { get; set; }

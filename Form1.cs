@@ -12,7 +12,8 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        private Conta conta;
+        private Conta[] contas;
+
         public Form1()
         {
             InitializeComponent();
@@ -20,34 +21,70 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.conta = new contaCorrente();
-            conta.Numero = 1;
-            Cliente cliente = new Cliente("Guilherme");
-            conta.Titular = cliente;
-            TotalizadordeContas t = new TotalizadordeContas();
-            t.Soma(conta);
+            // criando o array para guardar as contas
+            contas = new Conta[3];
+            // vamos inicializar algumas instâncias de Conta.
+            this.contas[0] = new Conta();
+            this.contas[0].Titular = new Cliente("Guilherme");
+            this.contas[0].Numero = 1;
+            this.contas[1] = new contaPoupanca();
+            this.contas[1].Titular = new Cliente("Henrique");
+            this.contas[1].Numero = 2;
+            this.contas[2] = new contaCorrente();
+            this.contas[2].Titular = new Cliente("Pompilio");
+            this.contas[2].Numero = 3;
 
-            txtTitular.Text = conta.Titular.Nome;
-            txtNumero.Text = Convert.ToString(conta.Numero);
-            txtSaldo.Text = Convert.ToString(conta.Saldo);
+            foreach(Conta contas in contas)
+            {
+                comboContas.Items.Add(contas.Titular.Nome);
+            }
+            foreach(Conta contas in contas)
+            {
+                comboContaTrans.Items.Add(contas.Titular.Nome);
+            }
         }
 
         private void btDeposita_Click(object sender, EventArgs e)
         {
-            string valorDigitado = txtValor.Text;
-            double valorOperacao = Convert.ToDouble(valorDigitado);
-            conta.Deposita(valorOperacao);
-            txtSaldo.Text = Convert.ToString(this.conta.Saldo);
-            MessageBox.Show("Deposito realizado!");
+            int indice = Convert.ToInt32(comboContas.SelectedIndex);
+            Conta selecionada = this.contas[indice];
+
+            int valor = Convert.ToInt32(txtValor.Text);
+            selecionada.Deposita(valor);
+            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
         }
 
         private void btSaca_Click(object sender, EventArgs e)
         {
-            string valorDigitado = txtValor.Text;
-            double valorOperacao = Convert.ToDouble(valorDigitado);
-            conta.Saca(valorOperacao);
-            txtSaldo.Text = Convert.ToString(this.conta.Saldo);
-            MessageBox.Show("Saque realizado!");
+            int indice = Convert.ToInt32(comboContas.SelectedIndex);
+            Conta selecionada = this.contas[indice];
+
+            int valor = Convert.ToInt32(txtValor.Text);
+            selecionada.Saca(valor);
+            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+        }
+
+        private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indice = Convert.ToInt32(comboContas.SelectedIndex);
+            Conta selecionada = this.contas[indice];
+
+            txtTitular.Text = selecionada.Titular.Nome;
+            txtNumero.Text = Convert.ToString(selecionada.Numero);
+            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+        }
+
+        private void btTransferir_Click(object sender, EventArgs e)
+        {
+            int indiceEnv = Convert.ToInt32(comboContas.SelectedIndex);
+            int indiceRec = Convert.ToInt32(comboContaTrans.SelectedIndex);
+            Conta selecEnv = this.contas[indiceEnv];
+            Conta selecRec = this.contas[indiceRec];
+
+            int valor = Convert.ToInt32(txtValor.Text);
+            selecEnv.Saca(valor);
+            selecRec.Deposita(valor);
+            txtSaldo.Text = Convert.ToString(selecEnv.Saldo);
         }
     }
 }
