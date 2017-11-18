@@ -2,11 +2,11 @@
 {
     public class Cliente
     {
-        public string nome { get; set; }
-
-        public Cliente(string _nome)
+        public Cliente(string p)
         {
-            this.nome = _nome;
+            this.Nome = p;
         }
+
+        public string Nome { get; set; }
     }
 }

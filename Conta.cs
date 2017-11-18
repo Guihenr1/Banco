@@ -8,7 +8,7 @@ namespace Banco
         public double Saldo { get; private set; }
         public Cliente Titular { get; set; }
 
-        public void Deposita(double valorOperacao)
+        public virtual void Deposita(double valorOperacao)
         {
             this.Saldo += valorOperacao;
         }
@@ -17,14 +17,5 @@ namespace Banco
         {
             this.Saldo -= valorOperacao;
         }
-    }
-
-    //Exemplo de herança
-    public class contaPoupanca : Conta
-    {
-        public override void Saca(double valor)
-        {
-            base.Saca(valor + 0.10);
-        }
-    }
+    }  
 }
