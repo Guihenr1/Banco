@@ -24,6 +24,8 @@ namespace Banco
             c.Numero = 1;
             Cliente cliente = new Cliente("Guilherme");
             c.Titular = cliente;
+            TotalizadordeContas t = new TotalizadordeContas();
+            t.Soma(c);
 
             this.c = new Conta();
 
@@ -38,7 +40,7 @@ namespace Banco
             double valorOperacao = Convert.ToDouble(valorDigitado);
             c.Deposita(valorOperacao);
             txtSaldo.Text = Convert.ToString(this.c.Saldo);
-            MessageBox.Show("Sucesso!");
+            MessageBox.Show("Deposito realizado!");
         }
 
         private void btSaca_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace Banco
             double valorOperacao = Convert.ToDouble(valorDigitado);
             c.Saca(valorOperacao);
             txtSaldo.Text = Convert.ToString(this.c.Saldo);
-            MessageBox.Show("Sucesso!");
+            MessageBox.Show("Saque realizado!");
         }
     }
 }
