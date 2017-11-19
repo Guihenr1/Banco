@@ -40,12 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboContaTrans = new System.Windows.Forms.ComboBox();
             this.btTransferir = new System.Windows.Forms.Button();
+            this.comboContaTrans = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btNovaConta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -165,15 +166,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Conta";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Conta:";
-            // 
             // comboContas
             // 
             this.comboContas.FormattingEnabled = true;
@@ -182,6 +174,15 @@
             this.comboContas.Size = new System.Drawing.Size(125, 21);
             this.comboContas.TabIndex = 1;
             this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Conta:";
             // 
             // groupBox3
             // 
@@ -195,23 +196,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Conta Destino";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Conta:";
-            // 
-            // comboContaTrans
-            // 
-            this.comboContaTrans.FormattingEnabled = true;
-            this.comboContaTrans.Location = new System.Drawing.Point(60, 27);
-            this.comboContaTrans.Name = "comboContaTrans";
-            this.comboContaTrans.Size = new System.Drawing.Size(121, 21);
-            this.comboContaTrans.TabIndex = 1;
-            // 
             // btTransferir
             // 
             this.btTransferir.Location = new System.Drawing.Point(60, 61);
@@ -222,11 +206,39 @@
             this.btTransferir.UseVisualStyleBackColor = true;
             this.btTransferir.Click += new System.EventHandler(this.btTransferir_Click);
             // 
+            // comboContaTrans
+            // 
+            this.comboContaTrans.FormattingEnabled = true;
+            this.comboContaTrans.Location = new System.Drawing.Point(60, 27);
+            this.comboContaTrans.Name = "comboContaTrans";
+            this.comboContaTrans.Size = new System.Drawing.Size(121, 21);
+            this.comboContaTrans.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Conta:";
+            // 
+            // btNovaConta
+            // 
+            this.btNovaConta.Location = new System.Drawing.Point(41, 378);
+            this.btNovaConta.Name = "btNovaConta";
+            this.btNovaConta.Size = new System.Drawing.Size(75, 23);
+            this.btNovaConta.TabIndex = 13;
+            this.btNovaConta.Text = "Nova Conta";
+            this.btNovaConta.UseVisualStyleBackColor = true;
+            this.btNovaConta.Click += new System.EventHandler(this.btNovaConta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 368);
+            this.ClientSize = new System.Drawing.Size(233, 413);
+            this.Controls.Add(this.btNovaConta);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -263,6 +275,7 @@
         private System.Windows.Forms.Button btTransferir;
         private System.Windows.Forms.ComboBox comboContaTrans;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btNovaConta;
     }
 }
 
