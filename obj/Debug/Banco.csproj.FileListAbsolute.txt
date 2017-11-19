@@ -18,3 +18,4 @@ C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\banco\obj\Debug\Banco.csproj.Genera
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\banco\obj\Debug\Banco.csproj.CoreCompileInputs.cache
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\banco\obj\Debug\Banco.exe
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\banco\obj\Debug\Banco.pdb
+C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\banco\obj\Debug\Banco.addConta.resources

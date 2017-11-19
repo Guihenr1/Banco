@@ -12,7 +12,17 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        private Conta[] contas;
+        private int numeroDeContas;
+
+        private Conta[] contas; 
+
+        public void AdicionaConta(Conta conta)
+        {
+            this.contas[this.numeroDeContas] = conta;
+            this.numeroDeContas++;
+            comboContas.Items.Add("titular: " + conta.Titular.Nome);
+            comboContaTrans.Items.Add("titular: " + conta.Titular.Nome);
+        }
 
         public Form1()
         {
@@ -21,27 +31,20 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // criando o array para guardar as contas
-            contas = new Conta[3];
-            // vamos inicializar algumas instâncias de Conta.
-            this.contas[0] = new Conta();
-            this.contas[0].Titular = new Cliente("Guilherme");
-            this.contas[0].Numero = 1;
-            this.contas[1] = new contaPoupanca();
-            this.contas[1].Titular = new Cliente("Henrique");
-            this.contas[1].Numero = 2;
-            this.contas[2] = new contaCorrente();
-            this.contas[2].Titular = new Cliente("Pompilio");
-            this.contas[2].Numero = 3;
+            this.contas = new Conta[10];
 
-            foreach(Conta contas in contas)
-            {
-                comboContas.Items.Add(contas.Titular.Nome);
-            }
-            foreach(Conta contas in contas)
-            {
-                comboContaTrans.Items.Add(contas.Titular.Nome);
-            }
+            Conta c1 = new Conta();
+            c1.Titular = new Cliente("victor");
+            c1.Numero = 1;
+            this.AdicionaConta(c1);
+            Conta c2 = new contaPoupanca();
+            c2.Titular = new Cliente("mauricio");
+            c2.Numero = 2;
+            this.AdicionaConta(c2);
+            Conta c3 = new contaCorrente();
+            c3.Titular = new Cliente("osni");
+            c3.Numero = 3;
+            this.AdicionaConta(c3);
         }
 
         private void btDeposita_Click(object sender, EventArgs e)
@@ -85,6 +88,12 @@ namespace Banco
             selecEnv.Saca(valor);
             selecRec.Deposita(valor);
             txtSaldo.Text = Convert.ToString(selecEnv.Saldo);
+        }
+
+        private void btNovaConta_Click(object sender, EventArgs e)
+        {
+            addConta formAdd = new addConta(this);
+            formAdd.ShowDialog();
         }
     }
 }
