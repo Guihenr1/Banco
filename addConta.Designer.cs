@@ -55,6 +55,7 @@
             // 
             // txtNumero
             // 
+            this.txtNumero.Enabled = false;
             this.txtNumero.Location = new System.Drawing.Point(65, 25);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(54, 20);
@@ -89,6 +90,7 @@
             this.Controls.Add(this.label1);
             this.Name = "addConta";
             this.Text = "addConta";
+            this.Load += new System.EventHandler(this.addConta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

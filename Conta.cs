@@ -11,5 +11,18 @@ namespace Banco
         public abstract void Deposita(double valorOperacao);
 
         public abstract void Saca(double valorOperacao);
+
+        private static int numeroDeContas;
+
+        public Conta()
+        {
+            Conta.numeroDeContas++;
+            this.Numero = Conta.numeroDeContas;
+        }
+
+        public static int ProximoNumero()
+        {
+            return numeroDeContas + 1;
+        } 
     }  
 }
