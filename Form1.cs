@@ -95,5 +95,19 @@ namespace Banco
             addConta formAdd = new addConta(this);
             formAdd.ShowDialog();
         }
+
+        private void btImpostos_Click(object sender, EventArgs e)
+        {
+            contaCorrente conta = new contaCorrente();
+            conta.Deposita(100);
+
+            SeguroDeVida sv = new SeguroDeVida();
+
+            TotalizadorDeTributos totalizador = new TotalizadorDeTributos();
+            totalizador.adiciona(conta);
+            MessageBox.Show("Total: " + totalizador.Total);
+            totalizador.adiciona(sv);
+            MessageBox.Show("Total: " + totalizador.Total);
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.comboContaTrans = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btNovaConta = new System.Windows.Forms.Button();
+            this.btImpostos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,7 +83,7 @@
             // 
             // btDeposita
             // 
-            this.btDeposita.Location = new System.Drawing.Point(29, 130);
+            this.btDeposita.Location = new System.Drawing.Point(26, 130);
             this.btDeposita.Name = "btDeposita";
             this.btDeposita.Size = new System.Drawing.Size(75, 23);
             this.btDeposita.TabIndex = 4;
@@ -225,7 +226,7 @@
             // 
             // btNovaConta
             // 
-            this.btNovaConta.Location = new System.Drawing.Point(41, 378);
+            this.btNovaConta.Location = new System.Drawing.Point(38, 378);
             this.btNovaConta.Name = "btNovaConta";
             this.btNovaConta.Size = new System.Drawing.Size(75, 23);
             this.btNovaConta.TabIndex = 13;
@@ -233,11 +234,22 @@
             this.btNovaConta.UseVisualStyleBackColor = true;
             this.btNovaConta.Click += new System.EventHandler(this.btNovaConta_Click);
             // 
+            // btImpostos
+            // 
+            this.btImpostos.Location = new System.Drawing.Point(119, 378);
+            this.btImpostos.Name = "btImpostos";
+            this.btImpostos.Size = new System.Drawing.Size(75, 23);
+            this.btImpostos.TabIndex = 14;
+            this.btImpostos.Text = "Impostos";
+            this.btImpostos.UseVisualStyleBackColor = true;
+            this.btImpostos.Click += new System.EventHandler(this.btImpostos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 413);
+            this.Controls.Add(this.btImpostos);
             this.Controls.Add(this.btNovaConta);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -276,6 +288,7 @@
         private System.Windows.Forms.ComboBox comboContaTrans;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btNovaConta;
+        private System.Windows.Forms.Button btImpostos;
     }
 }
 
