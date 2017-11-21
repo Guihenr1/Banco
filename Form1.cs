@@ -52,9 +52,16 @@ namespace Banco
             int indice = Convert.ToInt32(comboContas.SelectedIndex);
             Conta selecionada = this.contas[indice];
 
-            int valor = Convert.ToInt32(txtValor.Text);
-            selecionada.Deposita(valor);
-            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+            try
+            {
+                int valor = Convert.ToInt32(txtValor.Text);
+                selecionada.Deposita(valor);
+                txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+            }
+            catch(ArgumentException ex)
+            {
+                MessageBox.Show("Argumento invalido");
+            }
         }
 
         private void btSaca_Click(object sender, EventArgs e)

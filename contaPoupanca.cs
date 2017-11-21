@@ -10,11 +10,26 @@ namespace Banco
     {
         public override void Saca(double valor)
         {
-            Saldo -= (valor + 0.10);
+            if (valor < 0.0)
+            {
+                throw new Exception();
+            }
+            if (valor + 0.10 > this.Saldo)
+            {
+                throw new SaldoInsuficienteException();
+            }
+            else
+            {
+                this.Saldo -= valor + 0.10;
+            }
         }
         public override void Deposita(double valor)
         {
             Saldo += valor;
         }
+    }
+    public class SaldoInsuficienteException : Exception
+    {
+        
     }
 }
