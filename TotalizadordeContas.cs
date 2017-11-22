@@ -1,4 +1,6 @@
-﻿namespace Banco
+﻿using Banco.Contas;
+
+namespace Banco
 {
     public class TotalizadordeContas
     {

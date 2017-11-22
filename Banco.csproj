@@ -51,9 +51,9 @@
       <DependentUpon>addConta.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
-    <Compile Include="Conta.cs" />
-    <Compile Include="contaCorrente.cs" />
-    <Compile Include="contaPoupanca.cs" />
+    <Compile Include="Contas\Conta.cs" />
+    <Compile Include="Contas\contaCorrente.cs" />
+    <Compile Include="Contas\contaPoupanca.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
