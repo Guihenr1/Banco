@@ -23,6 +23,24 @@ namespace Banco.Contas
         public static int ProximoNumero()
         {
             return numeroDeContas + 1;
-        } 
+        }
+
+
+        //Modificação de metodos
+
+        public override bool Equals(object outro)
+        {
+            if(!(outro is Conta))
+            {
+                return false;
+            }
+            Conta outraConta = (Conta)outro;
+            return this.Numero == outraConta.Numero;
+        }
+
+        public override string ToString()
+        {
+            return "Titular " + this.Titular.Nome;
+        }
     }  
 }

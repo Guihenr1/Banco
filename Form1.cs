@@ -21,8 +21,8 @@ namespace Banco
         {
             this.contas[this.numeroDeContas] = conta;
             this.numeroDeContas++;
-            comboContas.Items.Add("titular: " + conta.Titular.Nome);
-            comboContaTrans.Items.Add("titular: " + conta.Titular.Nome);
+            comboContas.Items.Add(conta);
+            comboContaTrans.Items.Add(conta);
         }
 
         public Form1()
@@ -50,8 +50,7 @@ namespace Banco
 
         private void btDeposita_Click(object sender, EventArgs e)
         {
-            int indice = Convert.ToInt32(comboContas.SelectedIndex);
-            Conta selecionada = this.contas[indice];
+            Conta selecionada = (Conta)comboContas.SelectedItem;
 
             try
             {
@@ -67,12 +66,18 @@ namespace Banco
 
         private void btSaca_Click(object sender, EventArgs e)
         {
-            int indice = Convert.ToInt32(comboContas.SelectedIndex);
-            Conta selecionada = this.contas[indice];
+            Conta selecionada = (Conta)comboContas.SelectedItem;
 
-            int valor = Convert.ToInt32(txtValor.Text);
-            selecionada.Saca(valor);
-            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+            try
+            {
+                int valor = Convert.ToInt32(txtValor.Text);
+                selecionada.Saca(valor);
+                txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show("Argumento invalido");
+            }
         }
 
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
