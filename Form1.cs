@@ -13,16 +13,15 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        private int numeroDeContas;
-
-        private Conta[] contas; 
+        private List<Conta> contas;
+        private Dictionary<string, Conta> Dicionario;
 
         public void AdicionaConta(Conta conta)
         {
-            this.contas[this.numeroDeContas] = conta;
-            this.numeroDeContas++;
+            this.contas.Add(conta);
             comboContas.Items.Add(conta);
             comboContaTrans.Items.Add(conta);
+            this.Dicionario.Add(conta.Titular.Nome, conta);
         }
 
         public Form1()
@@ -32,7 +31,8 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.contas = new Conta[10];
+            this.Dicionario = new Dictionary<string, Conta>();   
+            this.contas = new List<Conta>();
 
             Conta c1 = new contaPoupanca();
             c1.Titular = new Cliente("victor");
@@ -121,6 +121,17 @@ namespace Banco
             MessageBox.Show("Total: " + totalizador.Total);
             totalizador.adiciona(sv);
             MessageBox.Show("Total: " + totalizador.Total);
+        }
+
+        private void btBusca_Click(object sender, EventArgs e)
+        {
+            string nomeTitular = txtNomeTitular.Text;
+            Conta conta = Dicionario[nomeTitular];
+            comboContas.SelectedItem = conta;
+
+            txtTitular.Text = conta.Titular.Nome;
+            txtNumero.Text = Convert.ToString(conta.Numero);
+            txtSaldo.Text = Convert.ToString(conta.Saldo);
         }
     }
 }

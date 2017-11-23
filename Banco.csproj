@@ -50,6 +50,7 @@
     <Compile Include="addConta.Designer.cs">
       <DependentUpon>addConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busca\GeradorDeDevedores.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Contas\Conta.cs" />
     <Compile Include="Contas\contaCorrente.cs" />
