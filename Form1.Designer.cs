@@ -40,6 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btBusca = new System.Windows.Forms.Button();
+            this.txtNomeTitular = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -48,9 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btNovaConta = new System.Windows.Forms.Button();
             this.btImpostos = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNomeTitular = new System.Windows.Forms.TextBox();
-            this.btBusca = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -173,6 +174,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Conta";
             // 
+            // btBusca
+            // 
+            this.btBusca.Location = new System.Drawing.Point(134, 76);
+            this.btBusca.Name = "btBusca";
+            this.btBusca.Size = new System.Drawing.Size(50, 23);
+            this.btBusca.TabIndex = 4;
+            this.btBusca.Text = "Buscar";
+            this.btBusca.UseVisualStyleBackColor = true;
+            this.btBusca.Click += new System.EventHandler(this.btBusca_Click);
+            // 
+            // txtNomeTitular
+            // 
+            this.txtNomeTitular.Location = new System.Drawing.Point(9, 78);
+            this.txtNomeTitular.Name = "txtNomeTitular";
+            this.txtNomeTitular.Size = new System.Drawing.Size(119, 20);
+            this.txtNomeTitular.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Busca por Titular:";
+            // 
             // comboContas
             // 
             this.comboContas.FormattingEnabled = true;
@@ -250,37 +277,22 @@
             this.btImpostos.UseVisualStyleBackColor = true;
             this.btImpostos.Click += new System.EventHandler(this.btImpostos_Click);
             // 
-            // label7
+            // button1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Busca por Titular:";
-            // 
-            // txtNomeTitular
-            // 
-            this.txtNomeTitular.Location = new System.Drawing.Point(9, 78);
-            this.txtNomeTitular.Name = "txtNomeTitular";
-            this.txtNomeTitular.Size = new System.Drawing.Size(119, 20);
-            this.txtNomeTitular.TabIndex = 3;
-            // 
-            // btBusca
-            // 
-            this.btBusca.Location = new System.Drawing.Point(134, 76);
-            this.btBusca.Name = "btBusca";
-            this.btBusca.Size = new System.Drawing.Size(50, 23);
-            this.btBusca.TabIndex = 4;
-            this.btBusca.Text = "Buscar";
-            this.btBusca.UseVisualStyleBackColor = true;
-            this.btBusca.Click += new System.EventHandler(this.btBusca_Click);
+            this.button1.Location = new System.Drawing.Point(72, 443);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 448);
+            this.ClientSize = new System.Drawing.Size(233, 479);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btImpostos);
             this.Controls.Add(this.btNovaConta);
             this.Controls.Add(this.groupBox3);
@@ -324,6 +336,7 @@
         private System.Windows.Forms.Button btBusca;
         private System.Windows.Forms.TextBox txtNomeTitular;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

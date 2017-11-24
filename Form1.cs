@@ -133,5 +133,11 @@ namespace Banco
             txtNumero.Text = Convert.ToString(conta.Numero);
             txtSaldo.Text = Convert.ToString(conta.Saldo);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormResultados fr = new FormResultados(this.contas);
+            fr.ShowDialog();
+        }
     }
 }

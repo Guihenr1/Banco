@@ -30,3 +30,4 @@ C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\bancoCL\obj\Debug\Banco.csproj.Gene
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\bancoCL\obj\Debug\Banco.csproj.CoreCompileInputs.cache
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\bancoCL\obj\Debug\Banco.exe
 C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\bancoCL\obj\Debug\Banco.pdb
+C:\Users\guilh\Desktop\VB\C# e Scratch\GITPC\bancoCL\obj\Debug\Banco.FormResultados.resources
